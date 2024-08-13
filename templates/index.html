@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Portafolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">INICIO</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">SOBRE MI</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">otros</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Vista previa -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">PAULA HERNANDEZ</h1>
+        <p class="home__subtitle">¿Quieres ayudar a Paula a cumplir sus sueños?</p>
+        <p class="info-block__text">Aqui te contamos como hacerlo</p>
+      </section>
+      <!-- Acerca de mí -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">SOBRE MI</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            - 15 veces campeona nacional de su categoria,
+            - Titulo de WFM conseguido en 2022 (North u20),
+            - Record femenil en medallas de oro en Juegos Conade (5 medallas),
+            - Representante en la Olimpiada Mundial de adultos Chennai 2022,
+            - Representante en la Olimpiada Mundial sub16 Azerbaiyan 2022,
+            -Selección Mexicana
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/playing.jpg"
+            alt="me"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+      <!-- Sección de competencias -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">MAS INFO</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/juganding1.png"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">FOTOS</span>
+              <input class="skill__button" type="submit" name="button_python" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/MONEY1.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">DONACIONES</span>
+              <input class="skill__button" type="submit" name="button_discord" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/SPONSORS.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">SPONSORS</span>
+              <input class="skill__button" type="submit" name="button_html" value="SHOW PROJECT">
+            </li>
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/CV.png"
+                alt="SQL"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">CURRICULUM</span>
+              <input class="skill__button" type="submit" name="button_db" value="SHOW PROJECT">
+            </li>
+          </ul>
+        </form>
+        {% if button_python%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/WALLPER.jpg" alt="project" width="500">
+              <a class="project__link" href="">"Para tener las cosas que otros no tienen hay que hacer lo que otros no hacen"</a>
+          </div>
+        {% endif %}
+      </section>
+      <!-- Formulario de contacto -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">CONTACTANOS</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="email" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="COMENTARIOS"></textarea>
+          </label>
+          <button class="form__button" type="submit">SEND</button>
+        </form>
+      </section>
+    </main>
+    <!-- Pie de página con enlaces a redes sociales -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
